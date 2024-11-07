@@ -25,9 +25,6 @@ email: onyeweketerence@gmail.com
     --bg-color: #F5F6F7;
     --dark-blue: #051C2F;
 
-
-
-
 }
 
 body {
@@ -759,6 +756,11 @@ Footer Styling START
     padding-top: 20px;
     border-top: 1px solid #555;
     font-size: 14px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-bottom p {
