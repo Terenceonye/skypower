@@ -1,0 +1,775 @@
+/* ***********************************
+
+Author: Terence Onyeweke
+email: onyeweketerence@gmail.com 
+
+************************************ */
+
+@font-face {
+    font-family: 'Noto-Sans';
+    src: url('../fonts/NotoSansHanunoo-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+:root {
+    --green: #39EC2A;
+    --blue: #178CEA;
+    --bg-color: #F5F6F7;
+    --dark-blue: #051C2F;
+
+
+
+
+}
+
+body {
+    font-family: 'Noto-Sans';
+}
+
+
+a {
+    text-decoration: none;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+/* button class and animation */
+.btn-class {
+    background-color: var(--green);
+    border-radius: 6px;
+    padding: 20px 30px;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.4s, transform 0.3s;
+    text-wrap: nowrap;
+}
+
+/* Animation for hover */
+.btn-class:hover {
+    background-color: var(--blue);
+    transform: translateY(-3px);
+}
+
+/* Animate the image on hover */
+.btn-class img {
+    margin-left: 10px;
+    transition: transform 0.4s ease;
+}
+
+.btn-class:hover img {
+    transform: translateX(10px); /* Image slides to the right */
+}
+
+/* Optional: Add a subtle underline effect on hover */
+.btn-class::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.btn-class:hover::after {
+    transform: scaleX(1);
+}
+
+
+/*******************************************************
+ header and hero css goes here   START
+ *******************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*******************************************************
+ header and hero css goes here   END
+ *******************************************************/
+
+
+
+
+ /*******************************************************
+ Why choose Solar section   START
+ *******************************************************/
+
+ .why-choose-solar .title {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+ }
+
+ .why-choose-solar .col-txt {
+    max-width: 80%;
+ }
+
+ .why-choose-solar .col-txt p:nth-child(even) {
+    font-weight: 700;
+ }
+
+ .why-choose-solar .col-txt p:nth-child(odd) {
+    font-size: 14px;
+    margin-bottom: 16px;
+ }
+
+ .why-choose-solar .col-txt p:first-of-type {
+    font-family: sans-serif;
+    font-size: 16px;
+ }
+
+ .why-choose-solar .col-txt p:last-of-type {
+    color: var(--blue);
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 1.7rem;
+    margin-bottom: 3.2rem;
+ }
+
+ .why-choose-solar .col-img {
+    background-image: url(../img/why-usbg.png);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    border-radius: 20px;
+    height: auto;
+    min-height: 300px;
+
+    color: white;
+ }
+
+ .why-choose-solar .col-img p {
+    font-size: 14px;
+    margin-top: 0;
+ }
+
+ /*******************************************************
+ Why choose Solar section   END
+ *******************************************************/
+
+  /*******************************************************
+ Why choose us section   START
+ *******************************************************/
+ .why-choose-us{
+    background: #F5F6F7;
+
+ }
+ 
+ .why-choose-us .title {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+ }
+
+ .why-choose-us .heading-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .why-choose-us .heading-row .h1-text {
+    flex: 1
+ }
+
+ .why-choose-us .heading-row .h1-text h1 {
+    font-size: 64px;
+    line-height: 83.2px;
+ }
+
+ .why-choose-us .heading-row .a-text {
+    max-width: 300px;
+ }
+
+ .why-choose-us .btn-class {
+    font-weight: normal;
+    padding: 15px 40px;
+ }
+
+ .why-choose-us .box-icons {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+ }
+
+ .why-choose-us .box-icons .box {
+    flex: 1 1 30%; /* Adjust width as needed (e.g., 30% for three cards per row) */
+    min-width: 300px; 
+    max-width: 300px;
+    margin: auto;
+ }
+
+ .why-choose-us .box-icons .box h5{
+    font-size: 25px;
+    line-height: 32.5px;
+    font-weight: 700px;
+    margin: 20px auto;
+ }
+
+ .why-choose-us .box-icons .box p{
+    flex: 1
+ }
+
+
+ .why-choose-us .video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of the container */
+    height: 520px; /* Fixed height */
+    padding: 20px; /* Optional: Add padding for spacing */
+}
+
+.why-choose-us .video-container {
+    position: relative;
+    width: auto; /* Let the width adjust based on the height */
+    height: 100%;
+    max-width: 100%; /* Optional: Ensure it doesn't overflow */
+    /* aspect-ratio: 16 / 9;  */
+    cursor: pointer;
+}
+
+.why-choose-us .video-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-choose-us .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(58, 236, 42, 0.24);
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-us .play-icon img {
+    width: 80px; /* Adjust size of the play button image */
+    height: 80px;
+}
+
+
+  /*******************************************************
+ Why choose us section   END
+ *********************************************************/
+
+
+
+   /*******************************************************
+ About Us section Start
+ *********************************************************/
+
+
+.about .title {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+ }
+ 
+
+ .about .col-img {
+    background-image: url(../img/screw-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    height: auto;
+    min-height: 300px;
+   
+ }
+
+ .about .col-txt .mission {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 32.5px;
+ }
+
+ .about .col-txt .m {
+    padding: 21px 24px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid #CAD9E8;
+    background-color: #F5F6F7;
+    transition: background 1s ease, color 1s ease;
+    cursor: cell;
+
+ }
+
+ #onhover {
+    background-color: var(--blue);
+    color: white;
+    transition: all 1s ease;
+ }
+
+ /*******************************************************
+ About Us section END
+ *********************************************************/
+
+
+
+/*******************************************************
+product section Start
+*********************************************************/
+
+.products {
+    background-color: var(--dark-blue);
+}
+.products .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+ }
+
+ 
+ /* .products {
+    display: flex;
+    gap: 20px;
+
+ } */
+
+ /* .products .box-products {
+    display: flex;
+    gap:10px
+ } */
+
+ .products .box-products .box {
+    cursor: grab;
+ }
+
+ .products .box-products .box > img {
+    width: 100%;
+ }
+
+ .products .box-products .box:hover {
+    box-shadow: 0 0 10px #3aec2a3a;
+    
+ }
+
+ .products .box-products .box h5{
+    font-size: 25px;
+    line-height: 32.5px;
+    font-weight: 700px;
+    margin: 20px auto;
+ }
+
+ .products .box-products .box p{
+    flex: 1;
+ }
+
+ .products .shop-now {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    color: var(--green);
+    text-wrap: nowrap;
+ }
+
+ .products .shop-now img {
+    margin-left: 15px;
+    transition: transform 0.4s ease; /* Add transition on transform property */
+}
+
+.products .shop-now:hover img {
+    transform: translateX(30px);
+}
+
+
+.product-hr {
+    border: 1px solid white; 
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* statistics */
+
+.products .stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.products .stats .stat {
+    width: 270px;
+    height: 270px;
+
+    text-align: center;
+
+    min-width: 150px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #F5F6F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text */
+    cursor: not-allowed;
+}
+
+.products .stats .stat span,
+.products .stats .stat p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #051C2F;
+    ;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.products .stats .stat span {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 62.4px;
+}
+
+.products .stats .stat:hover {
+    background-color: var(--blue);
+}
+
+.products .stats .stat:hover span,
+.products .stats .stat:hover p {
+    color: white;
+}
+
+/*******************************************************
+product section END
+*********************************************************/
+
+
+
+/*******************************************************
+BLOG section Start
+*********************************************************/
+
+
+ 
+ .blog .title {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+ }
+
+ .blog .heading-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .blog .heading-row .h1-text {
+    flex: 1
+ }
+
+ .blog .heading-row .h1-text h1 {
+    font-size: 64px;
+    line-height: 83.2px;
+ }
+
+ .blog .heading-row .a-text {
+    max-width: 300px;
+ }
+
+ .blog .btn-class {
+    font-weight: normal;
+    padding: 15px 40px;
+ }
+
+ .blog .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Gap between items */
+}
+
+.blog .posts .blog-post {
+    position: relative;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    height: 379px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.blog .posts .blog-post .text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10% 15px 15px;
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent background for readability */
+    color: white;
+    text-align: left;
+    border-radius: 0 0 20px 20px; /* Round the bottom corners */
+}
+
+.blog .posts .blog-post .text-box h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.blog .posts .blog-post .text-box p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/*******************************************************
+BLOG section END
+*********************************************************/
+
+
+/*******************************************************
+TESTIMONIAL section Start
+*********************************************************/
+
+
+.testimonial {
+    background-color: #2F4252;
+    ;
+}
+.testimonial .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+ }
+
+ .testimonial h1 {
+    font-size: 54px;
+    line-height: 70.2px;
+    text-align: center;
+    font-weight: 400;
+
+ }
+
+
+ .testimonial .testimonial-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Adjust for tablet screens (768px and below) */
+@media (max-width: 768px) {
+    .testimonial .testimonial-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Adjust for mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .testimonial .testimonial-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style for individual cards */
+.testimonial .testimonial-cards .testi {
+    padding: 30px;
+    background: #3E5261;
+    border-radius: 16px;
+    color: white;
+}
+
+.testimonial .testimonial-cards .testi h5 {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.testimonial .testimonial-cards .testi p:first-of-type {
+    font-size: 14px;
+    line-height: 20.8px;
+    font-weight: 400;
+    color: #CAD9E8;
+}
+
+.testimonial .testimonial-cards .testi p:last-of-type {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #39D931;
+}
+
+
+/*******************************************************
+TESTIMONIAL section END
+*********************************************************/
+
+
+
+
+/************************************************************
+Footer Styling START
+*****************************************************************/
+.footer {
+    background-color: var(--dark-blue);
+    ;
+    color:#B2C4D1;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between the two images */
+}
+
+.footer .footer-logo img {
+    height: 40px; /* Adjust height as needed for both images */
+    width: auto;  /* Keeps the aspect ratio */
+}
+
+.footer .footer-logo img:first-of-type {
+    height: 60px;
+    margin-top: -6px;
+}
+
+.footer .first-small p:first-of-type {
+    font-size: 12px;
+}
+
+.footer-section h4 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #ffffff;
+   
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #B2C4D1;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* newsletter */
+.newsletter-form .input-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding-right: 60px; 
+    padding: 12px 15px; 
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: 1px solid #051C2F;
+}
+
+.newsletter-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    cursor: pointer;
+    padding: 0 25px; 
+    display: flex;
+    align-items: center;
+    background: #39EC2A;
+
+    color: white;
+    font-size: 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 100%;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    color: #CAD3C8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
