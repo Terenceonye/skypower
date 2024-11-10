@@ -13,28 +13,153 @@ email: onyeweketerence@gmail.com
     <title>SkyPower</title>
 
     <link rel="shortcut icon" href="assets/img/wheel-box.png" type="image/x-icon">
-
-         <!-- Include Owl Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- aos css-- -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Include Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contactus.css">
 </head>
 <body class="bg-white">
     <header>
+        <!-- Navbar Large Screen -->
+        <nav class="navba d-flex justify-content-between align-items-center">
+            <div class="brand-logo">
+                <a href="">
+                    <img src="assets/img/navbar-logo1.png" alt="">
+                    <img src="assets/img/navba-logo2.png" alt="">
+                </a>
+            </div>
+            <ul class="navba-links">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#productCategory">Category</a></li>
+                <li><a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact Us</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
 
+            <div class="navba-btn">
+                <a href="" class="btn-class">Get Quote <img src="assets/img/btn-arrow.png" alt=""></a>
+            </div>
+        </nav>
+
+    <!-- Navbar Small Scren -->
+    <nav class="sm-navba d-flex justify-content-between align-items-center"><br>
+        <div class="open-navba">
+            <div class="sm-hamburger" onclick="navba_open()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div> 
+        <div class="brand-logo">
+            <a href="">
+                <img src="assets/img/navbar-logo1.png" alt="">
+                <img src="assets/img/navba-logo2.png" alt="">
+            </a>
+        </div>
+        <div class="sm-navbalinks-wrapper" style="z-index:3;width:300px;" id="mySidebar">
+            <div class="close-navba">
+                <a href="#" onclick="navba_close()" class="" title="close menu">
+                <i class="fa fa-remove"></i>
+                </a>
+            </div>
+            <div class="sm-navbalinks">
+                <ul class="navba-links">
+                    <li><a href="" class="active" onclick="navba_close()">Home</a></li>
+                    <li><a href="#aboutus" onclick="navba_close()">About Us</a></li>
+                    <li><a href="#productCategory" onclick="navba_close()">Category</a></li>
+                    <li><a href="" onclick="navba_close()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact Us</a></li>
+                    <li><a href="#blog" onclick="navba_close()">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sm-navbabtn">
+            <a href="" class="getquote-btn btn-class">Get Quote <img src="assets/img/btn-arrow.png" alt=""></a>
+        </div>
+
+         <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="navba-overlay" onclick="navba_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    </nav>
+
+
+     
+        <!-- Hero Section Starts Here -->
+        <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="hero-slider hero-slider1">
+                        <div class="hero-content text-center">
+                            <div class="top-content d-flex justify-content-between align-items-top">
+                                <p><img src="assets/img/hero-item1.png" alt=""></p>
+                                <img src="assets/img/hero-item2.png" alt=""> 
+                            </div>
+                            <h1>Power Your Home with Clean Energy</h1>
+                            <p class="p-text">Quality Solar Panels and Batteries, Ready to Deliver to Your Doorstep</p>
+                            <a href="#shop" class="btn-class shop-btn" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0" data-aos-anchor-placement="top-bottom">Shop Now <img src="assets/img/btn-arrow.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slider hero-slider2 bg-cover">
+                        <div class="hero-content text-center">
+                            <div class="top-content d-flex justify-content-between align-items-top">
+                                <p><img src="assets/img/hero-item1.png" alt=""></p>
+                                <img src="assets/img/hero-item2.png" alt=""> 
+                            </div>
+                            <h1>Efficient and Affordable Solar Power</h1>
+                            <p class="p-text">Empowering Homes with Solar Solutions</p>
+                            <a href="#shop" class="btn-class shop-btn">Shop Now <img src="assets/img/btn-arrow.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slider hero-slider3 bg-cover">
+                        <div class="hero-content text-center">
+                            <div class="top-content d-flex justify-content-between align-items-top">
+                                <p><img src="assets/img/hero-item1.png" alt=""></p>
+                                <img src="assets/img/hero-item2.png" alt=""> 
+                            </div>
+                            <h1>Reliable Solutions for Every Home</h1>
+                            <p class="p-text">Long-lasting, High-Quality Products for All Your Needs</p>
+                            <a href="#shop" class="btn-class shop-btn">Shop Now <img src="assets/img/btn-arrow.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Slides-->
+
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a> 
+            <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Hero Section Ends Here -->
+         
     </header>
+
+
     <main>
-
-
         <!-- why Choose solar section start -->
         <section class="why-choose-solar container my-5">
-            <div class="row gx-3 gy-5">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-txt">
+            <div class="row gx-3 gy-5" data-aos="zoom-in-down" data-aos-duration="1000">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-txt ">
                    <div class="col-txt">
                     <div class="title">
                         <img src="assets/img/wheel.png" alt="wheel">
@@ -68,7 +193,7 @@ email: onyeweketerence@gmail.com
 
         <!-- Why choose us section start -->
         <section class="why-choose-us my-5 pt-5">
-            <div class="container pb-4">
+            <div class="container pb-4" data-aos="fade-up" data-aos-duration="1200">
                 <div class="title">
                     <img src="assets/img/wheel.png" alt="wheel">
                     <span style="margin-left: 5px;"> Why Choose Us</span>
@@ -84,31 +209,37 @@ email: onyeweketerence@gmail.com
 
                 <div class="box-icons my-5">
                     <div class="box">
-                        <img src="assets/img/wheel-box.png" alt="box-icon">
-                        <h5>Quality Products</h5>
-                        <p>Choose from a range of trusted solar panel and battery brands.</p>
+                        <div><img src="assets/img/wheel-box.png" alt="box-icon"></div>
+                        <div>
+                            <h5>Quality Products</h5>
+                            <p>Choose from a range of trusted solar panel and battery brands.</p>
+                        </div>
                     </div>
                     <div class="box">
-                        <img src="assets/img/wheel-box.png" alt="box-icon">
-                        <h5>Affordable Prices</h5>
-                        <p>Competitive prices to help make clean energy accessible to all. </p>
+                        <div><img src="assets/img/wheel-box.png" alt="box-icon"></div>
+                        <div>
+                            <h5>Affordable Prices</h5>
+                            <p>Competitive prices to help make clean energy accessible to all. </p>
+                        </div>
                     </div>
                     <div class="box ">
-                        <img src="assets/img/wheel-box.png" alt="box-icon">
-                        <h5>Expert Support</h5>
-                        <p>Our team is here to help you select the right products and answer</p>
+                        <div><img src="assets/img/wheel-box.png" alt="box-icon"></div>
+                        <div>
+                            <h5>Expert Support</h5>
+                            <p>Our team is here to help you select the right products and answer</p>
+                        </div>
                     </div>
                     
                 </div>
 
                 <hr>
                 <!-- video div -->
-                <div class="video-section">
+                <div class="video-section" data-aos="flip-left" data-aos-duration="1000">
                     <div class="video-container">
-                        <img src="assets/img/video-bg.png" alt="Video Placeholder" class="video-placeholder">
-                        <div class="play-icon">
+                        <img src="assets/img/Video Box.png" alt="Video Placeholder" class="video-placeholder">
+                        <!-- <div class="play-icon">
                             <img src="assets/img/play-btn.png" alt="video-btn">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -117,15 +248,15 @@ email: onyeweketerence@gmail.com
 
 
         <!-- About Us start -->
-        <section class="about container my-5 py-5">
+        <section class="about container my-5 py-5" id="aboutus">
             <div class="row gx-3 gy-5">
                 <!-- Column for image, order reversed on small screens -->
-                <div class="col-sm-12 col-md-6 col-lg-6 col-img">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-img" data-aos="fade-down-right" data-aos-duration="1000">
                     <!-- background image goes here from CSS -->
                 </div>
             
                 <!-- Column for text, order reversed on small screens -->
-                <div class="col-sm-12 col-md-6 col-lg-6 col-txt">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-txt" data-aos="fade-down-left" data-aos-duration="1000">
                     <div class="col-txt ps-3">
                         <div class="title">
                             <img src="assets/img/wheel.png" alt="wheel">
@@ -150,8 +281,8 @@ email: onyeweketerence@gmail.com
         </section>
 
         <!-- product section -->
-         <section class="products my-5 pt-5">
-            <div class="container pb-5">
+         <section class="products my-5 pt-5" id="productCategory" >
+            <div class="container pb-5" data-aos="fade-up" data-aos-duration="1500">
                 <div class="title text-center mt-5">
                     <img src="assets/img/wheel.png" alt="wheel">
                     <span style="margin-left: 5px;"> PRODUCT CATEGORIES</span>
@@ -220,17 +351,17 @@ email: onyeweketerence@gmail.com
 
          <!-- blog section -->
 
-         <section class="blog container py-5">
+         <section class="blog container py-5" id="blog" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="20" data-aos-anchor-placement="top-bottom">
             <div class="title">
                 <img src="assets/img/wheel.png" alt="wheel">
                 <span style="margin-left: 5px;"> BLOG</span>
             </div>
-            <div class="d-flex justify-content-around heading-row">
+            <div class="heading-row">
                 <div class="h1-text">
                     <h1>Blog Post</h1>
                 </div>
-               <div class="a-text">
-                    <a href="#shop" class="btn-class">Explore More <img src="assets/img/btn-arrow.png" alt="btn-arrow"></a>
+               <div class="a-text" data-aos="fade-right" data-aos-duration="1500">
+                    <a href="#shop" class="btn-class">Explore More <img src="assets/img/btn-arrow.png" alt="btn-arrow" ></a>
                </div>
             </div>
 
@@ -263,7 +394,7 @@ email: onyeweketerence@gmail.com
             </div>
          </section>
 
-         <section class="testimonial mt-5">
+         <section class="testimonial mt-5" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="50" data-aos-anchor-placement="top-bottom">
             <div class="container py-5">
                 <div class="title text-center mt-5">
                     <img src="assets/img/wheel.png" alt="wheel">
@@ -352,7 +483,7 @@ email: onyeweketerence@gmail.com
                 <!-- Contact Info Column -->
                 <div class="footer-section contact-info">
                     <h4>Contact Info</h4>
-                    <p>Address: 1234 Main St. Anytown, USA 12345</p>
+                    <p>Address: 34 Main St. Anthony, USA</p>
                     <p>Phone: +1 (333) 000-0000</p>
                     <p>Email: <a href="mailto:Ask@skypower.com">Ask@skypower.com</a></p>
                 </div>
@@ -379,6 +510,134 @@ email: onyeweketerence@gmail.com
         </footer>
         
 
+         <!-- MODAL FOR CONTACT US SECTION -->
+         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+            
+                    <!-- Contact Section -->
+                    <section id="contact" class="contact section" style="overflow-x: hidden;">
+
+                        <!-- Section Title -->
+                        <div class="container section-title" data-aos="fade-up">
+                        <h2>Contact Us</h2>
+                        <p class="para text-center" style="width: 90%; margin: auto">We’re here to assist you. Send a message now.</p><br>
+                        </div><!-- End Section Title -->
+
+                        <div class="container" data-aos="fade-up" data-aos-delay="100">
+                            <style>
+                                .contact-row {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+
+                            </style>
+                        <div class="contact-row" >
+
+                            <div class="contact-1 order-2">
+
+                            <div class="info-wrap">
+
+                                <!-- ADDRESS COMMENTED OUT -->
+
+                                <!-- <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                <div>
+                                    <h3>Address</h3>
+                                    <p>Maryland Nekede, Old Nekede Rd Umualum, Imo State</p>
+                                </div>
+                                </div> -->
+
+                                
+
+                                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300" onclick="window.open('tel: +1 (333) 000-0000', '_blank')" style="cursor: pointer;">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+
+                                <div>
+                                    <h3>Call Us</h3>
+                                    <p onclick="">+1 (333) 000-0000</p>
+                                </div>
+                                </div><!-- End Info Item -->
+
+                                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400" onclick="window.open('mailto: ask@skypower.com', '_blank')" style="cursor: pointer;">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                                <div>
+                                    <h3>Email Us</h3>
+                                    <p>ask@skypower.com</p>
+                                </div>
+                                </div><!-- End Info Item -->
+
+                                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <div>
+                                    <h3>Address</h3>
+                                    <p> 34 Main St. Anthony, USA</p>
+                                </div>
+                                </div><!-- End Info Item -->
+
+                                
+                            </div>
+                            </div>
+
+                            <div class="contact-2">
+                                <div class="my-email-form" data-aos="fade-up" data-aos-delay="200">
+                                    <div >
+                                        <form action="" method="post" class="row gy-4" id="inquiry-form">
+                                            <div class="col-md-6">
+                                                <label for="name-field" class="pb-2">Your Name</label>
+                                                <input type="text" name="name" id="name-field" class="form-control" required="">
+                                            </div>
+                                    
+                                            <div class="col-md-6">
+                                                <label for="email-field" class="pb-2">Your Email</label>
+                                                <input type="email" class="form-control" name="email" id="email-field" required="">
+                                            </div>
+                                    
+                                            <div class="col-md-12">
+                                                <label for="subject-field" class="pb-2">Subject</label>
+                                                <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                                            </div>
+                                    
+                                            <div class="col-md-12">
+                                                <label for="message-field" class="pb-2">Message</label>
+                                                <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                                            </div>
+                                    
+                                            <div class="col-md-12 text-center">
+                                                <button type="submit" class="btn-class"><i class="fa-solid  fa-spin"></i> Send Message <img src="assets/img/btn-arrow.png" alt=""></button>
+                                            </div>
+                                        </form>
+                                        
+                                
+                                    </div>
+                                </div>
+                                
+                                
+                            </div><!-- End Contact Form -->
+
+                        </div>
+
+                        </div>
+
+                    </section><!-- End Contact Section -->
+
+    
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" style="background-color: var(--green); color: #333;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
 
     </main>
     <footer>
@@ -386,10 +645,15 @@ email: onyeweketerence@gmail.com
     </footer>
 
     <!-- Include jQuery (required for Owl Carousel) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-<!-- Include Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Include Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
 <script>
@@ -416,17 +680,45 @@ email: onyeweketerence@gmail.com
 
 
 });
-
-
-
 </script>
-
-
-
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- main js -->
     <script src="assets/js/scripts.js"></script>
+    
+      <script>/*
+           $(".navba-toggle").on("click", function() {
+            $(this).toggleClass("active");
+            $("#menu").toggleClass("open");
+        });
+        */
+
+            // $(".navT").on("click", function(){
+            // $(this).toggleClass("active");
+            // $("#menu").toggleClass("open");
+            // $(".content").toggleClass("shift");
+            
+            
+            // })
+
+
+            // Script to open and close sidebar
+function navba_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function navba_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+      </script>
+
+      <!-- aos js -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <!-- aos init -->
+       <script>
+        AOS.init();
+      </script>
 </body>
 </html>
