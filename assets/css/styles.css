@@ -765,6 +765,8 @@ product section Start
  }
 
  .products .shop-now img {
+    width: 40px;
+    height: 40px;
     display: inline;
     margin-left: 15px;
     transition: transform 0.4s ease; /* Add transition on transform property */
