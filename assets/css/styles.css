@@ -758,10 +758,11 @@ product section Start
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    width: 300px;
+    width: fit-content;
     cursor: pointer;
     color: var(--green);
     text-wrap: nowrap !important;
+
  }
 
  .products .shop-now img {
