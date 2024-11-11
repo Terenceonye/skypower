@@ -758,7 +758,7 @@ product section Start
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    width: max-content;
+    width: 300px;
     cursor: pointer;
     color: var(--green);
     text-wrap: nowrap !important;
