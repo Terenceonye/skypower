@@ -761,7 +761,7 @@ product section Start
     width: fit-content;
     cursor: pointer;
     color: var(--green);
-    text-wrap: nowrap;
+    text-wrap: nowrap !important;
  }
 
  .products .shop-now img {
